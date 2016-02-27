@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
     int counter = 0;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         final Button button_plus = (Button)findViewById(R.id.buttonA);
         final Button button_minus = (Button)findViewById(R.id.buttonB);
         final Button button_reset = (Button)findViewById(R.id.buttonC);
+        final Button button_next = (Button)findViewById(R.id.button_next);
 
         // TextView の設定
         textView = (TextView) findViewById(R.id.textViewA);
@@ -47,13 +49,22 @@ public class MainActivity extends AppCompatActivity {
         //カウンターをリセットする
         button_reset.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 counter = 0;
                 num = String.valueOf(counter);
                 textView.setText(num);
             }
         });
+
+        button_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClassName("com.example.kei_k.testproject", "com.example.kei_k.testproject.SubScene");
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

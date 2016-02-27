@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#808080"
-
     android:weightSum="1">
 
     <TextView
@@ -17,7 +16,7 @@
         android:background="#363947"
         android:textColor="#FFFFFF"
 
-        android:layout_weight="0.70" />
+        android:layout_weight="0.41" />
 
     <Button
         android:id="@+id/buttonA"
@@ -52,6 +51,14 @@
         android:background="#363947"
         android:textColor="#FFFFFF"
         android:layout_weight="0.04" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nextScene"
+        android:id="@+id/button_next"
+        android:layout_weight="0.07"
+        android:layout_gravity="right" />
 
 
 </LinearLayout>
