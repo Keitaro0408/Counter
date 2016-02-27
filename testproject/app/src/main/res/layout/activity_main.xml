@@ -55,7 +55,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="nextScene"
+        android:text="calculator"
         android:id="@+id/button_next"
         android:layout_weight="0.07"
         android:layout_gravity="right" />
